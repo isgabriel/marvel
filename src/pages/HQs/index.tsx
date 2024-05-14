@@ -1,4 +1,4 @@
-import { Card } from "../../components/Card";
+import { Carrossel } from "../../components/Carrossel";
 import { Header } from "../../components/Header";
 import { HqsData } from "../../data/hqsData";
 
@@ -7,17 +7,7 @@ const HQs = () => {
         <>
             <Header />
             <main>
-                <section>
-                    {HqsData.map((hq, index) => (
-                        <Card
-                            key={index}
-                            id={hq.id}
-                            imagem={hq.imagem}
-                            nome={hq.nome}
-                            resumo={hq.resumo}
-                        />
-                    ))}
-                </section>
+                <Carrossel data={HqsData} />
             </main>
         </>
     );

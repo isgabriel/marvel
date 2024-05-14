@@ -1,4 +1,4 @@
-import { Card } from "../../components/Card";
+import { Carrossel } from "../../components/Carrossel";
 import { Header } from "../../components/Header";
 import { FilmesData } from "../../data/filmesData";
 
@@ -7,17 +7,7 @@ const Filmes = () => {
         <>
             <Header />
             <main>
-                <section>
-                    {FilmesData.map((filme, index) => (
-                        <Card
-                            key={index}
-                            id={filme.id}
-                            imagem={filme.imagem}
-                            nome={filme.nome}
-                            resumo={filme.resumo}
-                        />
-                    ))}
-                </section>
+                <Carrossel data={FilmesData} />
             </main>
         </>
     );
