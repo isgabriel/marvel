@@ -1,7 +1,7 @@
-import HomemAranha from "../../public/assets/imagens/homem-aranha.svg";
-import Wanda from "../../public/assets/imagens/wanda.svg";
-import Thanos from "../../public/assets/imagens/thanos.svg";
-import Hulk from "../../public/assets/imagens/hulk.svg";
+import HomemAranha from "/assets/imagens/homem-aranha.svg";
+import Wanda from "/assets/imagens/wanda.svg";
+import Thanos from "/assets/imagens/thanos.svg";
+import Hulk from "/assets/imagens/hulk.svg";
 
 const PersonagensData = [
     {
@@ -17,7 +17,7 @@ const PersonagensData = [
             "Homem-Aranha: Sem Volta para Casa",
         ],
         imagem: HomemAranha,
-
+        plataforma: [],
         estrelas: 5,
     },
     {
@@ -32,7 +32,7 @@ const PersonagensData = [
             "WandaVision",
         ],
         imagem: Wanda,
-
+        plataforma: [],
         estrelas: 4,
     },
     {
@@ -46,7 +46,7 @@ const PersonagensData = [
             "Vingadores: Ultimato",
         ],
         imagem: Thanos,
-
+        plataforma: [],
         estrelas: 5,
     },
     {
@@ -61,7 +61,7 @@ const PersonagensData = [
             "Vingadores: Ultimato",
         ],
         imagem: Hulk,
-
+        plataforma: [],
         estrelas: 4,
     },
 ];

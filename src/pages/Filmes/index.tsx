@@ -7,7 +7,10 @@ const Filmes = () => {
         <>
             <Header />
             <main>
-                <Carrossel data={FilmesData} />
+                <Carrossel
+                    data={FilmesData}
+                    propsVariaveis={["Disponível em streaming:", "Crítica"]}
+                />
             </main>
         </>
     );

@@ -12,8 +12,9 @@ import {
 interface carrosselProps {
     data: any[];
     classname?: string;
+    propsVariaveis: string[];
 }
-const Carrossel = ({ data, classname }: carrosselProps) => {
+const Carrossel = ({ data, classname, propsVariaveis }: carrosselProps) => {
     const [indexAtual, setIndexAtual] = useState(0);
 
     const proximoCard = () => {
@@ -44,14 +45,18 @@ const Carrossel = ({ data, classname }: carrosselProps) => {
                         imagem={item.imagem}
                         nome={item.nome}
                         resumo={item.resumo}
+                        filmes={item.filmes}
+                        plataforma={item.plataforma}
+                        estrelas={item.estrelas}
+                        propsVariaveis={propsVariaveis}
                     />
                 </CarrosselItem>
             ))}
             <PrevArrow className="prev" onClick={anteriorCard}>
-                <img src="/public/assets/icones/seta-esquerda.svg" alt="" />
+                <img src="/assets/icones/seta-esquerda.svg" alt="" />
             </PrevArrow>
             <NextArrow className="next" onClick={proximoCard}>
-                <img src="/public/assets/icones/seta-direita.svg" alt="" />
+                <img src="/assets/icones/seta-direita.svg" alt="" />
             </NextArrow>
         </CarrosselContainer>
     );

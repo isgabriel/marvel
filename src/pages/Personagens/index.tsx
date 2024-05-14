@@ -9,7 +9,10 @@ const Personagens = () => {
         <>
             <Header />
             <main>
-                <Carrossel data={PersonagensData} />
+                <Carrossel
+                    data={PersonagensData}
+                    propsVariaveis={["Aparições:", "Avaliações dos Fãs"]}
+                />
             </main>
         </>
     );

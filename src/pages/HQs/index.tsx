@@ -7,7 +7,10 @@ const HQs = () => {
         <>
             <Header />
             <main>
-                <Carrossel data={HqsData} />
+                <Carrossel
+                    data={HqsData}
+                    propsVariaveis={["Disponível para compra:", "Crítica"]}
+                />
             </main>
         </>
     );
