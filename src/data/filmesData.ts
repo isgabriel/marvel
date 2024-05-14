@@ -15,6 +15,8 @@ const FilmesData = [
         imagem: HomemDeFerro,
         plataforma: [Disney],
         estrelas: 3,
+        anoLancamento: 2008,
+        ordemCronologica: 3,
     },
     {
         id: 2,
@@ -24,6 +26,8 @@ const FilmesData = [
         imagem: HomemDeFerro2,
         plataforma: [Disney],
         estrelas: 4,
+        anoLancamento: 2010,
+        ordemCronologica: 4,
     },
     {
         id: 3,
@@ -33,6 +37,8 @@ const FilmesData = [
         imagem: Thor,
         plataforma: [Disney],
         estrelas: 2,
+        anoLancamento: 2011,
+        ordemCronologica: 5,
     },
     {
         id: 4,
@@ -42,6 +48,8 @@ const FilmesData = [
         imagem: CapitaoAmerica,
         plataforma: [Disney],
         estrelas: 4,
+        anoLancamento: 2011,
+        ordemCronologica: 1,
     },
     {
         id: 5,
@@ -51,6 +59,8 @@ const FilmesData = [
         imagem: CapitaMarvel,
         plataforma: [Disney],
         estrelas: 4,
+        anoLancamento: 2019,
+        ordemCronologica: 2,
     },
 ];
 
