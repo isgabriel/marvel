@@ -56,7 +56,6 @@ const Modal = ({ taAberto, onClose, card }: ModalProps) => {
                     </div>
                 )}
 
-                {/* estrelas */}
                 <div>
                     <h4>{card.propsVariaveis[1]}</h4>
                     <Estrelas valorEstrelas={card.estrelas} />

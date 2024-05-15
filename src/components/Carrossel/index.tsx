@@ -5,6 +5,7 @@ import "./styles.ts";
 import {
     CarrosselContainer,
     CarrosselItem,
+    CarrosselMiniSection,
     NextArrow,
     PrevArrow,
 } from "./styles.ts";
@@ -31,33 +32,35 @@ const Carrossel = ({ data, classname, propsVariaveis }: carrosselProps) => {
 
     return (
         <CarrosselContainer>
-            {[...data, ...data].map((item, index) => (
-                <CarrosselItem
-                    key={index}
-                    className={`${classname} ${
-                        index >= indexAtual && index < indexAtual + 3
-                            ? "ativo"
-                            : ""
-                    }`}
-                >
-                    <Card
-                        id={item.id}
-                        imagem={item.imagem}
-                        nome={item.nome}
-                        resumo={item.resumo}
-                        filmes={item.filmes}
-                        plataforma={item.plataforma}
-                        estrelas={item.estrelas}
-                        propsVariaveis={propsVariaveis}
-                    />
-                </CarrosselItem>
-            ))}
-            <PrevArrow className="prev" onClick={anteriorCard}>
-                <img src="/assets/icones/seta-esquerda.svg" alt="" />
-            </PrevArrow>
-            <NextArrow className="next" onClick={proximoCard}>
-                <img src="/assets/icones/seta-direita.svg" alt="" />
-            </NextArrow>
+            <CarrosselMiniSection>
+                {[...data, ...data].map((item, index) => (
+                    <CarrosselItem
+                        key={index}
+                        className={`${classname} ${
+                            index >= indexAtual && index < indexAtual + 3
+                                ? "ativo"
+                                : ""
+                        }`}
+                    >
+                        <Card
+                            id={item.id}
+                            imagem={item.imagem}
+                            nome={item.nome}
+                            resumo={item.resumo}
+                            filmes={item.filmes}
+                            plataforma={item.plataforma}
+                            estrelas={item.estrelas}
+                            propsVariaveis={propsVariaveis}
+                        />
+                    </CarrosselItem>
+                ))}
+                <PrevArrow className="prev" onClick={anteriorCard}>
+                    <img src="/assets/icones/seta-esquerda.svg" alt="" />
+                </PrevArrow>
+                <NextArrow className="next" onClick={proximoCard}>
+                    <img src="/assets/icones/seta-direita.svg" alt="" />
+                </NextArrow>
+            </CarrosselMiniSection>
         </CarrosselContainer>
     );
 };

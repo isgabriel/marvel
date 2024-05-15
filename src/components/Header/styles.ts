@@ -5,9 +5,15 @@ export const HeaderContainer = styled.header`
     display: flex;
     flex-direction: column;
 
+    position: fixed;
+    top: 0;
+    z-index: 9;
+
+    width: 100%;
+
     background-color: #6f1315;
 
-    .firstLineContainer {
+    .headerFechado {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -28,7 +34,7 @@ export const Logo = styled.img`
     height: auto;
 `;
 
-export const MenuIcon = styled.div`
+export const MenuIcone = styled.div`
     font-size: 24px;
 
     color: #fff;

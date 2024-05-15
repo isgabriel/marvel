@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../hooks/useUser";
+import { LoginContainer } from "./styles";
 
 const Login = () => {
     const [usuario, setUsuario] = useState("");
@@ -23,9 +24,8 @@ const Login = () => {
     };
 
     return (
-        <main>
+        <LoginContainer>
             <section>
-                <img src="/assets/logo/logo.svg" alt="logo" />
                 <h1>Bem-vindo(a) de volta!</h1>
 
                 <div>
@@ -70,7 +70,7 @@ const Login = () => {
                     </p>
                 </div>
             </section>
-        </main>
+        </LoginContainer>
     );
 };
 

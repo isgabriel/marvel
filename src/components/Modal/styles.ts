@@ -26,8 +26,6 @@ export const ModalFechar = styled.button`
     width: 30px;
     height: 30px;
 
-    cursor: pointer;
-
     background-color: transparent;
     color: white;
 

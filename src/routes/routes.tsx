@@ -3,10 +3,10 @@ import { Route, Routes } from "react-router-dom";
 import { Personagens } from "../pages/Personagens";
 import { Filmes } from "../pages/Filmes";
 import { HQs } from "../pages/HQs";
-import { Login } from "../pages/Login";
 
 import { PublicasRotas } from "./publicas.routes";
 import { ProtegidasRotas } from "./protegidas.routes";
+import { Home } from "../pages/Home";
 
 const AppRoutes = () => {
     return (
@@ -18,7 +18,7 @@ const AppRoutes = () => {
             </Route>
 
             <Route element={<PublicasRotas />}>
-                <Route path="/" element={<Login />} />
+                <Route path="/" element={<Home />} />
             </Route>
         </Routes>
     );

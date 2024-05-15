@@ -6,7 +6,7 @@ import { useUser } from "../../hooks/useUser";
 import {
     HeaderContainer,
     Logo,
-    MenuIcon,
+    MenuIcone,
     NavLink,
     NavbarContainer,
     NavbarContainerDesktop,
@@ -33,13 +33,13 @@ const Header = () => {
     return (
         <>
             <HeaderContainer>
-                <div className="firstLineContainer">
+                <div className="headerFechado">
                     <Link to="/personagens">
                         <Logo src="/assets/logo/logo.svg" alt="Logo" />
                     </Link>
-                    <MenuIcon onClick={cliqueMenuHamburguer}>
+                    <MenuIcone onClick={cliqueMenuHamburguer}>
                         {menuAberto ? <FiX /> : <FiMenu />}
-                    </MenuIcon>
+                    </MenuIcone>
                 </div>
                 {menuAberto && (
                     <NavbarContainer>
