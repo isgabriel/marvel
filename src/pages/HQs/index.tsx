@@ -1,11 +1,16 @@
+import { Carrossel } from "../../components/Carrossel";
 import { Header } from "../../components/Header";
+import { HqsData } from "../../data/hqsData";
 
 const HQs = () => {
     return (
         <>
             <Header />
             <main>
-                <h1>HQs Page</h1>
+                <Carrossel
+                    data={HqsData}
+                    propsVariaveis={["Disponível para compra:", "Crítica"]}
+                />
             </main>
         </>
     );

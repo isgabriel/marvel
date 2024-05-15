@@ -1,10 +1,10 @@
-import Disney from "../../public/assets/icones/disney.svg";
+import Disney from "/assets/icones/disney.svg";
 
-import HomemDeFerro from "../../public/assets/imagens/homem-de-ferro.svg";
-import HomemDeFerro2 from "../../public/assets/imagens/homem-de-ferro-2.svg";
-import Thor from "../../public/assets/imagens/thor.svg";
-import CapitaoAmerica from "../../public/assets/imagens/capitao-america.svg";
-import CapitaMarvel from "../../public/assets/imagens/capita-marvel.svg";
+import HomemDeFerro from "/assets/imagens/homem-de-ferro.svg";
+import HomemDeFerro2 from "/assets/imagens/homem-de-ferro-2.svg";
+import Thor from "/assets/imagens/thor.svg";
+import CapitaoAmerica from "/assets/imagens/capitao-america.svg";
+import CapitaMarvel from "/assets/imagens/capita-marvel.svg";
 
 const FilmesData = [
     {
@@ -15,6 +15,8 @@ const FilmesData = [
         imagem: HomemDeFerro,
         plataforma: [Disney],
         estrelas: 3,
+        anoLancamento: 2008,
+        ordemCronologica: 3,
     },
     {
         id: 2,
@@ -24,6 +26,8 @@ const FilmesData = [
         imagem: HomemDeFerro2,
         plataforma: [Disney],
         estrelas: 4,
+        anoLancamento: 2010,
+        ordemCronologica: 4,
     },
     {
         id: 3,
@@ -33,6 +37,8 @@ const FilmesData = [
         imagem: Thor,
         plataforma: [Disney],
         estrelas: 2,
+        anoLancamento: 2011,
+        ordemCronologica: 5,
     },
     {
         id: 4,
@@ -42,6 +48,8 @@ const FilmesData = [
         imagem: CapitaoAmerica,
         plataforma: [Disney],
         estrelas: 4,
+        anoLancamento: 2011,
+        ordemCronologica: 1,
     },
     {
         id: 5,
@@ -51,6 +59,8 @@ const FilmesData = [
         imagem: CapitaMarvel,
         plataforma: [Disney],
         estrelas: 4,
+        anoLancamento: 2019,
+        ordemCronologica: 2,
     },
 ];
 
