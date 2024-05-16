@@ -1,10 +1,17 @@
 import { FaRegTimesCircle } from "react-icons/fa";
 import Estrelas from "./Estrelas";
 import {
+    ListaAparicoes,
     ModalContainer,
     ModalConteudo,
     ModalFechar,
     ModalImagem,
+    ModalTextos,
+    TituloAparicoes,
+    TituloModal,
+    SubtituloModal,
+    DescricaoModal,
+    TituloStreaming,
 } from "./styles";
 import { useUser } from "../../hooks/useUser";
 
@@ -33,43 +40,52 @@ const Modal = ({ card }: ModalProps) => {
                             src={card.imagem}
                             alt={`imagem de ${card.nome}`}
                         />
+                        <ModalTextos>
+                            <TituloModal>{card.nome}</TituloModal>
 
-                        <h3>{card.nome}</h3>
+                            {card.propsVariaveis[1] === "Crítica" && (
+                                <DescricaoModal>{card.resumo}</DescricaoModal>
+                            )}
+                            {card.propsVariaveis[0] === "Aparições:" && (
+                                <div>
+                                    <TituloAparicoes>
+                                        {card.propsVariaveis[0]}
+                                    </TituloAparicoes>
+                                    <ul>
+                                        {card.filmes.map((filme, index) => (
+                                            <ListaAparicoes key={index}>
+                                                {filme}
+                                            </ListaAparicoes>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
 
-                        {card.propsVariaveis[1] === "Crítica" && (
-                            <p>{card.resumo}</p>
-                        )}
-                        {card.propsVariaveis[0] === "Aparições:" && (
-                            <div>
-                                <h4>{card.propsVariaveis[0]}</h4>
-                                <ul>
-                                    {card.filmes.map((filme, index) => (
-                                        <li key={index}>{filme}</li>
+                            {card.propsVariaveis[0] !== "Aparições:" && (
+                                <div>
+                                    <TituloStreaming>
+                                        {card.propsVariaveis[0]}
+                                    </TituloStreaming>
+                                    {card.plataforma.map((item, index) => (
+                                        <img
+                                            key={index}
+                                            src={item}
+                                            alt="ícone de plataforma que disponibiliza este item"
+                                        />
                                     ))}
-                                </ul>
-                            </div>
-                        )}
+                                </div>
+                            )}
 
-                        {card.propsVariaveis[0] !== "Aparições:" && (
                             <div>
-                                <p>{card.propsVariaveis[0]}</p>
-                                {card.plataforma.map((item, index) => (
-                                    <img
-                                        key={index}
-                                        src={item}
-                                        alt="ícone de plataforma que disponibiliza este item"
-                                    />
-                                ))}
+                                <SubtituloModal>
+                                    {card.propsVariaveis[1]}
+                                </SubtituloModal>
+                                <Estrelas valorEstrelas={card.estrelas} />
                             </div>
-                        )}
-
-                        <div>
-                            <h4>{card.propsVariaveis[1]}</h4>
-                            <Estrelas valorEstrelas={card.estrelas} />
-                        </div>
-                        <ModalFechar onClick={fechaModal}>
-                            <FaRegTimesCircle />
-                        </ModalFechar>
+                            <ModalFechar onClick={fechaModal}>
+                                <FaRegTimesCircle />
+                            </ModalFechar>
+                        </ModalTextos>
                     </ModalConteudo>
                 </ModalContainer>
             )}

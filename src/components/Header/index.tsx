@@ -17,7 +17,7 @@ const Header = () => {
     const [menuAberto, setMenuAberto] = useState(false);
     const [selecionado, setSelecionado] = useState("");
 
-    const { logout } = useUser();
+    const { logout, modalAberto } = useUser();
 
     const location = useLocation();
 
@@ -33,7 +33,7 @@ const Header = () => {
 
     return (
         <>
-            <HeaderContainer>
+            <HeaderContainer className={modalAberto ? "modal" : ""}>
                 <div className="headerFechado">
                     <Link to="/personagens">
                         <Logo src="/assets/logo/logo.svg" alt="Logo" />

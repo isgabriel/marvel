@@ -22,6 +22,11 @@ export const HeaderContainer = styled.header`
 
         padding: 10px 20px;
     }
+
+    &.modal {
+        position: static;
+    }
+
     @media (min-width: 769px) {
         flex-direction: row;
         justify-content: space-between;
