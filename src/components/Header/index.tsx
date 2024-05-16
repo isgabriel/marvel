@@ -15,7 +15,7 @@ import {
 
 const Header = () => {
     const [menuAberto, setMenuAberto] = useState(false);
-    const [selecionado, setSelecionado] = useState("");
+    const [_selecionado, setSelecionado] = useState("");
 
     const { logout, modalAberto } = useUser();
 
