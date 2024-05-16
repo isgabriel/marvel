@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     overflow:hidden;
 }
 
-:root{
+:root {
     --vermelho: #FF0000;
     --vermelhoHeader: rgba(255, 0, 0,0.5);
     --vermelhoEscuro: #6a0000;
@@ -42,7 +42,7 @@ export const GlobalStyle = createGlobalStyle`
             transparent 5%,
             #212121 74%,
             #000 100%
-        );
+    );
 
 }
 
@@ -71,12 +71,12 @@ main {
 
 }
 
-button{
+button {
     cursor:pointer;
     border:none;
 }
 
-a{
+a {
     text-decoration:none
 }
 

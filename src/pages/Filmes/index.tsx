@@ -4,7 +4,6 @@ import { Header } from "../../components/Header";
 import { FilmesData } from "../../data/filmesData";
 import { Filtro } from "./Filtro";
 import { Background } from "../../components/Background";
-import { FilmesContainer } from "./styles";
 
 const Filmes = () => {
     const [filtro, setFiltro] = useState("padrao");
@@ -43,7 +42,7 @@ const Filmes = () => {
         <>
             <Header />
 
-            <FilmesContainer>
+            <main>
                 <Filtro filtro={filtro} onFiltroChange={mudaFiltro} />
 
                 <Carrossel
@@ -51,7 +50,7 @@ const Filmes = () => {
                     propsVariaveis={["Disponível em streaming:", "Crítica"]}
                 />
                 <Background />
-            </FilmesContainer>
+            </main>
         </>
     );
 };
