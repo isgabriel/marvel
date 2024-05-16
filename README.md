@@ -14,6 +14,8 @@
 <p>Aplicação Web para visualização dos principais personagens, filmes e HQs da Marvel.</p>
 <p>Essa aplicação foi desenvolvida como teste técnico da empresa Mestres da Web, para a oportunidade de Desenvolvedor Front End. A ideia era demonstrar os conhecimentos técnicos na área, mantendo as boas práticas de desenvolvimento.</p>
 
+<p>Deploy: https://marvel-frontend-three.vercel.app</p>
+
 ### 📱 Resultado Mobile
 
 <figure>
