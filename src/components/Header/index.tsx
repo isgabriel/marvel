@@ -6,17 +6,18 @@ import { useUser } from "../../hooks/useUser";
 import {
     HeaderContainer,
     Logo,
-    MenuIcon,
+    MenuIcone,
     NavLink,
     NavbarContainer,
     NavbarContainerDesktop,
+    UsuarioDiv,
 } from "./styles";
 
 const Header = () => {
     const [menuAberto, setMenuAberto] = useState(false);
     const [selecionado, setSelecionado] = useState("");
 
-    const { logout } = useUser();
+    const { logout, modalAberto } = useUser();
 
     const location = useLocation();
 
@@ -32,24 +33,24 @@ const Header = () => {
 
     return (
         <>
-            <HeaderContainer>
-                <div className="firstLineContainer">
+            <HeaderContainer className={modalAberto ? "modal" : ""}>
+                <div className="headerFechado">
                     <Link to="/personagens">
                         <Logo src="/assets/logo/logo.svg" alt="Logo" />
                     </Link>
-                    <MenuIcon onClick={cliqueMenuHamburguer}>
+                    <MenuIcone onClick={cliqueMenuHamburguer}>
                         {menuAberto ? <FiX /> : <FiMenu />}
-                    </MenuIcon>
+                    </MenuIcone>
                 </div>
                 {menuAberto && (
                     <NavbarContainer>
-                        <div>
+                        <UsuarioDiv>
                             <img
                                 src="/assets/icones/usuario.svg"
                                 alt="foto do usuário"
                             />
                             <button onClick={logout}>Sair</button>
-                        </div>
+                        </UsuarioDiv>
                         <NavLink
                             to="/personagens"
                             className={
@@ -115,13 +116,13 @@ const Header = () => {
                     >
                         HQs
                     </NavLink>
-                    <div>
+                    <UsuarioDiv>
                         <img
                             src="/assets/icones/usuario.svg"
                             alt="foto do usuário"
                         />
                         <button onClick={logout}>Sair</button>
-                    </div>
+                    </UsuarioDiv>
                 </NavbarContainerDesktop>
             </HeaderContainer>
         </>

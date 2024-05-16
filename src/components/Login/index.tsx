@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../hooks/useUser";
+import { Cadastrar, DivInputs, DivSalvarLogin, LoginContainer } from "./styles";
 
 const Login = () => {
     const [usuario, setUsuario] = useState("");
@@ -23,15 +24,14 @@ const Login = () => {
     };
 
     return (
-        <main>
-            <section>
-                <img src="/assets/logo/logo.svg" alt="logo" />
+        <LoginContainer>
+            <div>
                 <h1>Bem-vindo(a) de volta!</h1>
 
                 <div>
                     <h2>Acesse sua conta:</h2>
                     <form onSubmit={fazLogin}>
-                        <div>
+                        <DivInputs>
                             <input
                                 placeholder="Usuário"
                                 type="text"
@@ -47,30 +47,32 @@ const Login = () => {
                                 onChange={(e) => setSenha(e.target.value)}
                                 required
                             />
-                        </div>
+                        </DivInputs>
 
-                        <div>
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    checked={salvarLogin}
-                                    onChange={(e) =>
-                                        setSalvarLogin(e.target.checked)
-                                    }
-                                />
-                                Salvar login
-                            </label>
+                        <DivSalvarLogin>
+                            <input
+                                type="checkbox"
+                                checked={salvarLogin}
+                                onChange={(e) =>
+                                    setSalvarLogin(e.target.checked)
+                                }
+                                id="salvar"
+                            />
+                            <label htmlFor="salvar">Salvar login</label>
 
-                            <a href="#">Esqueci a senha</a>
-                        </div>
+                            <a href="#">
+                                <p>Esqueci a senha</p>
+                                <span></span>
+                            </a>
+                        </DivSalvarLogin>
                         <button type="submit">Entrar</button>
                     </form>
-                    <p>
-                        Ainda não tem o login? <span>Cadastre-se</span>
-                    </p>
+                    <Cadastrar>
+                        Ainda não tem o login? <a href="#">Cadastre-se</a>
+                    </Cadastrar>
                 </div>
-            </section>
-        </main>
+            </div>
+        </LoginContainer>
     );
 };
 

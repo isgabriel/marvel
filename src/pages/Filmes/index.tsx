@@ -3,6 +3,7 @@ import { Carrossel } from "../../components/Carrossel";
 import { Header } from "../../components/Header";
 import { FilmesData } from "../../data/filmesData";
 import { Filtro } from "./Filtro";
+import { Background } from "../../components/Background";
 
 const Filmes = () => {
     const [filtro, setFiltro] = useState("padrao");
@@ -48,6 +49,7 @@ const Filmes = () => {
                     data={filmesOrdenados}
                     propsVariaveis={["Disponível em streaming:", "Crítica"]}
                 />
+                <Background />
             </main>
         </>
     );

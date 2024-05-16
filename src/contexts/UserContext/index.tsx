@@ -8,6 +8,8 @@ const UserProvider = ({ children }: iChildren) => {
     const [ehAutenticado, setEhAutenticado] = useState(
         localStorage.getItem("@Marvel:USUARIO") ? true : false
     );
+    const [modalAberto, setModalAberto] = useState(false);
+    const [modalId, setModalId] = useState<number | null>(null);
 
     useEffect(() => {
         const userAutoLogin = localStorage.getItem("@Marvel:USUARIO");
@@ -25,8 +27,28 @@ const UserProvider = ({ children }: iChildren) => {
         setEhAutenticado(false);
     };
 
+    const abreModal = (id: number) => {
+        setModalAberto(true);
+        setModalId(id);
+    };
+
+    const fechaModal = () => {
+        setModalAberto(false);
+        setModalId(null);
+    };
+
     return (
-        <UserContext.Provider value={{ ehAutenticado, login, logout }}>
+        <UserContext.Provider
+            value={{
+                ehAutenticado,
+                login,
+                logout,
+                modalAberto,
+                modalId,
+                abreModal,
+                fechaModal,
+            }}
+        >
             {children}
         </UserContext.Provider>
     );

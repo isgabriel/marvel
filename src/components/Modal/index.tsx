@@ -1,16 +1,23 @@
 import { FaRegTimesCircle } from "react-icons/fa";
 import Estrelas from "./Estrelas";
 import {
+    ListaAparicoes,
     ModalContainer,
     ModalConteudo,
     ModalFechar,
     ModalImagem,
+    ModalTextos,
+    TituloAparicoes,
+    TituloModal,
+    SubtituloModal,
+    DescricaoModal,
+    TituloStreaming,
 } from "./styles";
+import { useUser } from "../../hooks/useUser";
 
 interface ModalProps {
-    taAberto: boolean;
-    onClose: () => void;
     card: {
+        id: number;
         nome: string;
         resumo: string;
         imagem: string;
@@ -21,51 +28,68 @@ interface ModalProps {
     };
 }
 
-const Modal = ({ taAberto, onClose, card }: ModalProps) => {
-    if (!taAberto) return null;
+const Modal = ({ card }: ModalProps) => {
+    const { modalAberto, modalId, fechaModal } = useUser();
 
     return (
-        <ModalContainer onClick={onClose}>
-            <ModalConteudo onClick={(e) => e.stopPropagation()}>
-                <ModalImagem src={card.imagem} alt={`imagem de ${card.nome}`} />
+        <>
+            {modalAberto && modalId === card.id && (
+                <ModalContainer onClick={fechaModal}>
+                    <ModalConteudo onClick={(e) => e.stopPropagation()}>
+                        <ModalImagem
+                            src={card.imagem}
+                            alt={`imagem de ${card.nome}`}
+                        />
+                        <ModalTextos>
+                            <TituloModal>{card.nome}</TituloModal>
 
-                <h3>{card.nome}</h3>
+                            {card.propsVariaveis[1] === "Crítica" && (
+                                <DescricaoModal>{card.resumo}</DescricaoModal>
+                            )}
+                            {card.propsVariaveis[0] === "Aparições:" && (
+                                <div>
+                                    <TituloAparicoes>
+                                        {card.propsVariaveis[0]}
+                                    </TituloAparicoes>
+                                    <ul>
+                                        {card.filmes.map((filme, index) => (
+                                            <ListaAparicoes key={index}>
+                                                {filme}
+                                            </ListaAparicoes>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
 
-                {card.propsVariaveis[1] === "Crítica" && <p>{card.resumo}</p>}
-                {card.propsVariaveis[0] === "Aparições:" && (
-                    <div>
-                        <h4>{card.propsVariaveis[0]}</h4>
-                        <ul>
-                            {card.filmes.map((filme, index) => (
-                                <li key={index}>{filme}</li>
-                            ))}
-                        </ul>
-                    </div>
-                )}
+                            {card.propsVariaveis[0] !== "Aparições:" && (
+                                <div>
+                                    <TituloStreaming>
+                                        {card.propsVariaveis[0]}
+                                    </TituloStreaming>
+                                    {card.plataforma.map((item, index) => (
+                                        <img
+                                            key={index}
+                                            src={item}
+                                            alt="ícone de plataforma que disponibiliza este item"
+                                        />
+                                    ))}
+                                </div>
+                            )}
 
-                {card.propsVariaveis[0] !== "Aparições:" && (
-                    <div>
-                        <p>{card.propsVariaveis[0]}</p>
-                        {card.plataforma.map((item, index) => (
-                            <img
-                                key={index}
-                                src={item}
-                                alt="ícone de plataforma que disponibiliza este item"
-                            />
-                        ))}
-                    </div>
-                )}
-
-                {/* estrelas */}
-                <div>
-                    <h4>{card.propsVariaveis[1]}</h4>
-                    <Estrelas valorEstrelas={card.estrelas} />
-                </div>
-                <ModalFechar onClick={onClose}>
-                    <FaRegTimesCircle />
-                </ModalFechar>
-            </ModalConteudo>
-        </ModalContainer>
+                            <div>
+                                <SubtituloModal>
+                                    {card.propsVariaveis[1]}
+                                </SubtituloModal>
+                                <Estrelas valorEstrelas={card.estrelas} />
+                            </div>
+                            <ModalFechar onClick={fechaModal}>
+                                <FaRegTimesCircle />
+                            </ModalFechar>
+                        </ModalTextos>
+                    </ModalConteudo>
+                </ModalContainer>
+            )}
+        </>
     );
 };
 
