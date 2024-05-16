@@ -1,4 +1,11 @@
 import { createGlobalStyle } from "styled-components";
+import FontBold from "../assets/fonts/AxiformaBold.otf";
+import FontSemiBold from "../assets/fonts/AxiformaSemiBold.otf";
+import FontMedium from "../assets/fonts/AxiformaMedium.otf";
+import FontRegular from "../assets/fonts/AxiformaRegular.otf";
+import FontLight from "../assets/fonts/AxiformaLight.otf";
+import FontThin from "../assets/fonts/AxiformaThin.otf";
+import FontMarvel from "../assets/fonts/MarvelRegular.ttf";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -6,10 +13,13 @@ export const GlobalStyle = createGlobalStyle`
     margin:0;
     padding:0;
     box-sizing:border-box;
+    
+
 }
 
 :root{
     --vermelho: #FF0000;
+    --vermelhoEscuro: #6a0000;
     --branco: #FFFFFF;
     --cinza: #84848D;
     --cinzaClaro: #D1D1D6;
@@ -51,6 +61,54 @@ main {
 }
 
 button{
-    cursor:pointer
+    cursor:pointer;
+    border:none;
 }
+
+a{
+    text-decoration:none
+}
+
+@font-face {
+   font-family: 'Axiforma Bold';
+   src: local('Axiforma Bold'), url(${FontBold}) format('OpenType');
+   font-weight: 700;
+ }
+
+ @font-face {
+   font-family: 'Axiforma SemiBold';
+   src: local('Axiforma SemiBold'),local('Axiforma-SemiBild'), url(${FontSemiBold}) format('OpenType');
+   font-weight: 600;
+ }
+
+ @font-face {
+   font-family: 'Axiforma Medium';
+   src: local('Axiforma Medium'), url(${FontMedium}) format('OpenType');
+   font-weight: 500;
+ }
+
+ @font-face {
+   font-family: 'Axiforma Regular';
+   src: local('Axiforma Regular'), url(${FontRegular}) format('OpenType');
+   font-weight: 400;
+ }
+
+ @font-face {
+   font-family: 'Axiforma Light';
+   src: local('Axiforma Light'), url(${FontLight}) format('OpenType');
+   font-weight: 300;
+ }
+
+ @font-face {
+   font-family: 'Axiforma Thin';
+   src: local('Axiforma Thin'), url(${FontThin}) format('OpenType');
+   font-weight: 100;
+ }
+
+ @font-face {
+   font-family: 'Marvel' ;
+   src: local('Marvel Regular'), url(${FontMarvel}) format('TrueType');
+ }
+
+ 
 `;

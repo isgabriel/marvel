@@ -3,25 +3,22 @@ import styled, { keyframes } from "styled-components";
 export const fadeInLeft = keyframes`
     from {
       opacity: 0;
-      transform: translateX(0%);
-      
+      transform: translateX(100%);
     }
     to {
       opacity: 1;
-      transform: translateX(-25%);
-      
-      
+      transform: translateX(0%);
     }
   `;
 
 export const fadeInUp = keyframes`
 from {
   opacity: 0;
-  transform: translateY(10%);
+  transform: translateY(100%);
 }
 to {
   opacity: 1;
-  transform: translateY(-35%);
+  transform: translateY(35%);
 }
 `;
 
@@ -43,18 +40,16 @@ export const Container = styled.main`
 export const LogoContainer = styled.div`
     flex: 1;
 
+    animation: ${fadeInUp} 2s ease forwards;
+
     display: flex;
     justify-content: center;
     align-items: center;
-
-    animation: ${fadeInUp} 2s ease forwards;
 
     z-index: 5;
 
     @media (min-width: 769px) {
         animation: ${fadeInLeft} 2s ease forwards;
-
-        justify-content: flex-end;
     }
 `;
 

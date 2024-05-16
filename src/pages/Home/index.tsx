@@ -10,7 +10,7 @@ const Home = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowLogin(true);
-        }, 4000);
+        }, 2000);
 
         return () => clearTimeout(timer);
     }, []);
