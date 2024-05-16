@@ -1,3 +1,5 @@
+import { FiltroContainer } from "./styles";
+
 const Filtro = ({
     filtro,
     onFiltroChange,
@@ -6,14 +8,13 @@ const Filtro = ({
     onFiltroChange: (filtro: string) => void;
 }) => {
     return (
-        <div>
-            <label htmlFor="filtro">Filtrar por:</label>
+        <FiltroContainer>
             <select
                 id="filtro"
                 value={filtro}
                 onChange={(e) => onFiltroChange(e.target.value)}
             >
-                <option value="padrao">Padrão</option>
+                <option value="padrao">Filtrar por</option>
                 <option value="lancamento">Lançamento</option>
                 <option value="cronologia">Cronologia</option>
             </select>
@@ -23,7 +24,7 @@ const Filtro = ({
                     alt="icone de seta abaixo"
                 />
             </label>
-        </div>
+        </FiltroContainer>
     );
 };
 export { Filtro };

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ModalContainer = styled.div`
+export const ModalContainer = styled.dialog`
     position: fixed;
     top: 0;
     left: 0;

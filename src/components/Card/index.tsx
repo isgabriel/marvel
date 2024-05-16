@@ -1,9 +1,10 @@
-import { useState } from "react";
 import { iCard } from "../../interfaces/card.interface";
 import Modal from "../Modal";
 import { CardContainer, CardConteudo } from "./styles";
+import { useUser } from "../../hooks/useUser";
 
 const Card = ({
+    id,
     nome,
     resumo,
     imagem,
@@ -12,15 +13,7 @@ const Card = ({
     estrelas,
     propsVariaveis,
 }: iCard) => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const handleOpenModal = () => {
-        setIsModalOpen(true);
-    };
-
-    const handleCloseModal = () => {
-        setIsModalOpen(false);
-    };
+    const { abreModal } = useUser();
 
     return (
         <>
@@ -29,13 +22,12 @@ const Card = ({
                 <CardConteudo>
                     <h3>{nome}</h3>
                     <p>{resumo}</p>
-                    <button onClick={handleOpenModal}>Ver detalhes</button>
+                    <button onClick={() => abreModal(id)}>Ver detalhes</button>
                 </CardConteudo>
             </CardContainer>
             <Modal
-                taAberto={isModalOpen}
-                onClose={handleCloseModal}
                 card={{
+                    id,
                     nome,
                     resumo,
                     imagem,

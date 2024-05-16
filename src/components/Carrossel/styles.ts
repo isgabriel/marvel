@@ -2,12 +2,10 @@ import styled, { css } from "styled-components";
 
 export const CarrosselContainer = styled.section`
     overflow: hidden;
-    z-index: 5;
+    /* z-index: 5; */
 
     min-height: 100vh;
     min-width: 100vw;
-
-    background-color: #0007;
 
     display: flex;
     flex-wrap: nowrap;
@@ -20,6 +18,8 @@ export const CarrosselContainer = styled.section`
     }
 `;
 export const CarrosselMiniSection = styled.div`
+    z-index: 2;
+
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
