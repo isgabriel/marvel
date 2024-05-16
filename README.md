@@ -4,8 +4,8 @@
 
 ## Índice
 
--   [Descrição](#✔️-descrição)
--   [Técnicas e Tecnologias Utilizadas](#🔨-técnicas-e-tecnologias-utilizadas)
+-   [Descrição](#descrição)
+-   [🔨 Técnicas e Tecnologias Utilizadas](#🔨-técnicas-e-tecnologias-utilizadas)
 -   [Como Usar](#🚀-como-usar)
 -   [Colaboradores](#🤝-colaboradores)
 
