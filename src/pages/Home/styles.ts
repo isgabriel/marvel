@@ -14,11 +14,11 @@ export const fadeInLeft = keyframes`
 export const fadeInUp = keyframes`
 from {
   opacity: 0;
-  transform: translateY(100%);
+  transform: translateY(50%);
 }
 to {
   opacity: 1;
-  transform: translateY(35%);
+  transform: translateY(0%);
 }
 `;
 
