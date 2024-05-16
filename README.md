@@ -1,30 +1,81 @@
-# React + TypeScript + Vite
+# Marvel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="./public/assets/logo/logo.svg" style="width:100%;height:80px;margin:0 auto;" alt="logo"/>
 
-Currently, two official plugins are available:
+## Índice
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   [Descrição](#✔️-descrição)
+-   [Técnicas e Tecnologias Utilizadas](#🔨-técnicas-e-tecnologias-utilizadas)
+-   [Como Usar](#🚀-como-usar)
+-   [Colaboradores](#🤝-colaboradores)
 
-## Expanding the ESLint configuration
+## ✔️ Descrição
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<p>Aplicação Web para visualização dos principais personagens, filmes e HQs da Marvel.</p>
+<p>Essa aplicação foi desenvolvida como teste técnico da empresa Mestres da Web, para a oportunidade de Desenvolvedor Front End. A ideia era demonstrar os conhecimentos técnicos na área, mantendo as boas práticas de desenvolvimento.</p>
 
-- Configure the top-level `parserOptions` property like this:
+### 📱 Resultado Mobile
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+<figure>
+    <img src="./public/assets/readme/marvel-mobile.gif" alt="gif da versão mobile da aplicação"/>    
+</figure>
+
+### 💻 Resultado Web
+
+<figure>
+    <img src="./public/assets/readme/marvel-desktop.gif" alt="gif da versão desktop da aplicação">
+</figure>
+<br/>
+
+## 🔨 Técnicas e Tecnologias Utilizadas
+
+-   `React`
+-   `Typescript`
+-   `Styled Components`
+-   `Bibliotecas React - Icons, Router Dom, Simple Star Rating`
+-   `Responsividade - Mobile First`
+-   `Proteção de rotas - Router Dom`
+-   `Autologin - Local Storage`
+-   `Github`
+-   `Git - Git Flow`
+-   `Adobe XD`
+-   `Vercel`
+
+## 🚀 Como Usar
+
+### Pré-requisitos
+
+-   É necessário possuir o <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" target="_blank">Node</a> e o <a href="https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable" target="_blank">Yarn</a> instalados na máquina.
+
+### 1. Faça a clonagem do repositório:
+
+    ```
+      $ https://github.com/isgabriel/marvel_frontend.git
+    ```
+
+### 2. Executando a aplicação (rode cada comando separadamente no terminal)
+
+```
+$ yarn
+
+$ yarn dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### 3. Acessar o servidor local através da URL que aparecerá no terminal
+
+## 🤝 Colaboradores
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="http://github.com/isgabriel">
+        <img src="https://avatars.githubusercontent.com/u/100328347?v=4" width="100px;" alt="Foto de Gabriel Montenegro no GitHub"/><br>
+        <sub>
+          <b>Gabriel Montenegro</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+[⬆ Voltar ao topo](#marvel)<br>

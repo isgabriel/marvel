@@ -55,10 +55,16 @@ const Carrossel = ({ data, classname, propsVariaveis }: carrosselProps) => {
                     </CarrosselItem>
                 ))}
                 <PrevArrow className="prev" onClick={anteriorCard}>
-                    <img src="/assets/icones/seta-esquerda.svg" alt="" />
+                    <img
+                        src="/assets/icones/seta-esquerda.svg"
+                        alt="icone de seta apontando para esquerda"
+                    />
                 </PrevArrow>
                 <NextArrow className="next" onClick={proximoCard}>
-                    <img src="/assets/icones/seta-direita.svg" alt="" />
+                    <img
+                        src="/assets/icones/seta-direita.svg"
+                        alt="icone de seta apontando para direita"
+                    />
                 </NextArrow>
             </CarrosselMiniSection>
         </CarrosselContainer>
