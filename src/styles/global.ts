@@ -27,7 +27,10 @@ export const GlobalStyle = createGlobalStyle`
     --preto: #000000;
     --vermelhoGradiente: linear-gradient(
         rgba(255,0,0,1), rgba(255,0,0,0.3)
-    );;
+    );
+    --vermelhoModalGradiente: linear-gradient(90deg,
+        rgba(255,0,0,1), #400e0e
+    );
     --pretoGradienteMobile: linear-gradient(
         to right,
         transparent 40%,
@@ -45,13 +48,16 @@ export const GlobalStyle = createGlobalStyle`
 
 main {
     overflow: hidden;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
     min-height: 100vh;
+    
     padding: 0 20px;
+    
     position: relative;
     z-index: 1;
 
@@ -59,6 +65,7 @@ main {
 
     @media (min-width: 769px) {
         align-items: flex-start;
+
         padding: 0;
     }
 

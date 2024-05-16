@@ -17,8 +17,6 @@ export const ModalContainer = styled.dialog`
 `;
 
 export const ModalConteudo = styled.div`
-    background-color: red;
-
     border-radius: 30px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 
@@ -27,6 +25,7 @@ export const ModalConteudo = styled.div`
 
     overflow-y: scroll;
 
+    background: var(--vermelhoModalGradiente);
     color: var(--branco);
 
     > div {
@@ -105,8 +104,8 @@ export const TituloStreaming = styled.h4`
 
 export const ModalFechar = styled.button`
     position: absolute;
-    bottom: 15px;
-    right: 15px;
+    bottom: 25px;
+    right: 32px;
 
     width: 30px;
     height: 30px;
@@ -116,6 +115,12 @@ export const ModalFechar = styled.button`
 
     border: none;
     border-radius: 5px;
+
+    &:hover {
+        transform: scale(1.15);
+        transition: 0.5s;
+        color: var(--cinza);
+    }
 
     > svg {
         width: 100%;
