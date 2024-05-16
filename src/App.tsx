@@ -1,9 +1,11 @@
-import { Login } from "./pages/Login";
+import { AppRoutes } from "./routes/routes";
+import { GlobalStyle } from "./styles/global";
 
 function App() {
     return (
         <>
-            <Login />
+            <GlobalStyle />
+            <AppRoutes />
         </>
     );
 }

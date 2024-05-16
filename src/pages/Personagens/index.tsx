@@ -1,11 +1,20 @@
 import { Header } from "../../components/Header";
 
+import { PersonagensData } from "../../data/personagensData";
+
+import { Carrossel } from "../../components/Carrossel";
+import { Background } from "../../components/Background";
+
 const Personagens = () => {
     return (
         <>
             <Header />
             <main>
-                <h1>Personagens Page</h1>
+                <Carrossel
+                    data={PersonagensData}
+                    propsVariaveis={["Aparições:", "Avaliações dos Fãs"]}
+                />
+                <Background />
             </main>
         </>
     );
