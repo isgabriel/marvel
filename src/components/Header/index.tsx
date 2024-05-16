@@ -10,6 +10,7 @@ import {
     NavLink,
     NavbarContainer,
     NavbarContainerDesktop,
+    UsuarioDiv,
 } from "./styles";
 
 const Header = () => {
@@ -43,13 +44,13 @@ const Header = () => {
                 </div>
                 {menuAberto && (
                     <NavbarContainer>
-                        <div>
+                        <UsuarioDiv>
                             <img
                                 src="/assets/icones/usuario.svg"
                                 alt="foto do usuário"
                             />
                             <button onClick={logout}>Sair</button>
-                        </div>
+                        </UsuarioDiv>
                         <NavLink
                             to="/personagens"
                             className={
@@ -115,13 +116,13 @@ const Header = () => {
                     >
                         HQs
                     </NavLink>
-                    <div>
+                    <UsuarioDiv>
                         <img
                             src="/assets/icones/usuario.svg"
                             alt="foto do usuário"
                         />
                         <button onClick={logout}>Sair</button>
-                    </div>
+                    </UsuarioDiv>
                 </NavbarContainerDesktop>
             </HeaderContainer>
         </>
