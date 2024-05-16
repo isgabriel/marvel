@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     margin:0;
     padding:0;
     box-sizing:border-box;
+    overflow:hidden;
 }
 
 :root{
@@ -24,7 +25,9 @@ export const GlobalStyle = createGlobalStyle`
     --cinzaMedio: #E5E5EA;
     --cinza: #84848D;
     --preto: #000000;
-    --vermelhoGradiente: ;
+    --vermelhoGradiente: linear-gradient(
+        rgba(255,0,0,1), rgba(255,0,0,0.3)
+    );;
     --pretoGradienteMobile: linear-gradient(
         to right,
         transparent 40%,

@@ -24,6 +24,7 @@ export const CarrosselMiniSection = styled.div`
     flex-wrap: nowrap;
     justify-content: space-evenly;
     align-items: center;
+    gap: 8px;
 
     @media (min-width: 1000px) {
         position: relative;
@@ -47,7 +48,7 @@ export const CarrosselItem = styled.div`
 
 export const Setas = css`
     position: absolute;
-    top: 35%;
+    top: 40%;
 
     background-color: transparent;
 
