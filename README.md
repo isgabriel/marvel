@@ -51,9 +51,9 @@
 
 ### 1. Faça a clonagem do repositório:
 
-    ```
-      $ https://github.com/isgabriel/marvel_frontend.git
-    ```
+```
+$ https://github.com/isgabriel/marvel_frontend.git
+```
 
 ### 2. Executando a aplicação (rode cada comando separadamente no terminal)
 
